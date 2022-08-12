@@ -1,0 +1,91 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  height: 40px;
+  margin: 20px auto;
+}
+.btns button {
+  border: none;
+  font-size: 20px;
+  background-color: rgb(23, 207, 201);
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px;
+}
+.btns button.disabled {
+  opacity: 0.6;
+  cursor: no-drop;
+}
+.image {
+  width: 600px;
+  height: 300px;
+  padding: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+}
+.image > img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  transition: 0.5s linear;
+  -webkit-transition: 0.5s linear;
+  -moz-transition: 0.5s linear;
+  -ms-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+}
+.image img.active {
+  top: 0;
+  width: 100%;
+  transition-delay: 0ms;
+  height: 100%;
+  transition: 0.4s linear;
+  z-index: 1;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+}
+.image > span {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: 30px;
+  background-color: rgb(244, 244, 244, 0.6);
+  display: block;
+  padding: 10px;
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+ul li {
+  margin-right: 10px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  padding: 10px;
+  cursor: pointer;
+}
+ul li.active {
+  background-color: aqua;
+}
